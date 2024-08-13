@@ -275,24 +275,37 @@ p {
 }
 
 .previews {
-  display: flex;
+  display: grid;
+  width: 1000px;
+  min-height: 300px;
+  background-color: cyan;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "nami wanderly usnrc";
 }
 
 .miniNami {
+  grid-area: nami;
   background-color: gray;
-  width: 240px;
+  width: 100%;
   height: 180px;
 }
 
 .miniWanderly {
+  grid-area: wanderly;
   background-color: gray;
-  width: 240px;
+  width: 100%;
   height: 180px;
-  margin: 0 100px 0 100px;
 }
 
 .miniUsnrc {
+  grid-area: usnrc;
   background-color: gray;
-  width: 240px;
+  width: 100%;
   height: 180px;
+}
+
+@media only all and (max-width:480px;) {
+
 }
